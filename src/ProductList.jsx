@@ -284,14 +284,16 @@ function ProductList({ onHomeClick }) {
                             { plantGroup.plants.map((product, index) => (
                                 <div className='product-card'>
                                     <div className='plantname_heading'>
-                                    <h4 className='product-name'>{product.name}</h4>
+                                        <h4 className='product-title'>{product.name}</h4>
                                     </div>
                                     
                                     <div className='product-image'>
                                         <img src={product.image} alt={product.name}/>
                                     </div>
-                                    <p className='product-description'>{product.description}</p>
-                                    <p className='product-price'>{product.cost}</p>
+                                    <div className='card-footer'>
+                                        <p className='product-description'>{product.description}</p>
+                                        <p className='product-price'>{product.cost}</p>
+                                    </div>
                                 </div>
                             ))}
                             </div>

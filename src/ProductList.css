@@ -81,6 +81,13 @@ body {
     z-index: 1;
 }
 
+.card-footer {
+    margin-top: 1rem;
+    border-top: 1px solid rgb(223, 221, 221);
+    padding: 0.5rem;
+    padding-top: 1rem;
+}
+
 .product-title {
     /* font-weight: bold; */
     font-size: x-large;
@@ -100,7 +107,7 @@ body {
 }
 
 .product-description {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: larger;
     margin: 0.5rem;
 }
