@@ -82,19 +82,27 @@ body {
 }
 
 .product-title {
-    font-weight: bold;
-    margin-bottom: 10px;
+    /* font-weight: bold; */
+    font-size: x-large;
+    margin: 0.8rem;
 }
 
 .product-price {
     color: #e74c3c;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin: 0.75rem;
+    font-weight: bold;
 }
 
 .product-image {
     max-width: 100%;
     height: 200px; /* Adjust height for better consistency */
+}
+
+.product-description {
+    font-weight: bold;
+    font-size: larger;
+    margin: 0.5rem;
 }
 
 .product-button {
@@ -176,15 +184,19 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-    /* background-color: yellow; */
+    background-color: yellow;
+    padding: 0.5rem;
 }
 .plant_heading{
-    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin: 20px;
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
+    padding: 1rem;
 
     
 }
