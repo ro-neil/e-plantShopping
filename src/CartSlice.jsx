@@ -20,7 +20,6 @@ export const CartSlice = createSlice({
         state.count++;
     },
     removeItem: (state, action) => {
-        const item = 
         state.items = state.items.filter(item => {
             const flag = item.name !== action.payload
             if (flag) {
@@ -38,8 +37,7 @@ export const CartSlice = createSlice({
                 itemToUpdate.quantity = 1;
             } else {
                 itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
-            }
-            
+            }        
         }
     }
   },

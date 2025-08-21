@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
-import { addItem } from './CartSlice';
+import { addItem, removeItem } from './CartSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
 
@@ -271,13 +271,12 @@ function ProductList({ onHomeClick }) {
         }));
     };
 
-    const countItems = () => {
-        let total = 0;
-        cart.forEach((item) => {
-            total += item.quantity;
-        });
-        return total;
-    }
+    const handleRemoveFromCart = (product) => {
+        setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
+          ...prevState, // Spread the previous state to retain existing entries
+          [product.name]: false, // Set the current product's name as a key with value 'true' to mark it as added
+        }));
+    };
 
     useEffect(()=> {
         let total = 0;
@@ -370,7 +369,7 @@ function ProductList({ onHomeClick }) {
 
                 </div>
             ) : (
-                <CartItem onContinueShopping={handleContinueShopping} />
+                <CartItem onContinueShopping={handleContinueShopping} onRemoveFromCart={handleRemoveFromCart} />
             )}
         </div>
     );
