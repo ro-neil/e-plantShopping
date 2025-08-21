@@ -30,10 +30,12 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
+  top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
   gap: 20px;
+  border: 1px solid red;
+  /* padding: 0 3rem; */
 }
 
 .landing_content {
@@ -50,6 +52,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  border: 1px solid blue;
 }
 
 .content p,
