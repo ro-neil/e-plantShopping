@@ -16,6 +16,7 @@ const CartItem = ({ onContinueShopping }) => {
     return total;
   };
 
+
   const handleContinueShopping = (e) => {
    onContinueShopping(e);
   };
@@ -73,6 +74,7 @@ const CartItem = ({ onContinueShopping }) => {
     </div>
   );
 };
+
 
 export default CartItem;
 

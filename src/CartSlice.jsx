@@ -17,18 +17,31 @@ export const CartSlice = createSlice({
             // If item does not exist, add it to the cart with quantity 1
             state.items.push({ name, image, cost, quantity: 1 });
         }
+        state.count++;
     },
     removeItem: (state, action) => {
-        state.items = state.items.filter(item => item.name !== action.payload);
+        const item = 
+        state.items = state.items.filter(item => {
+            const flag = item.name !== action.payload
+            if (flag) {
+                state.count--;
+            }
+            return flag;
+        });
     },
     updateQuantity: (state, action) => {
         const { name, quantity } = action.payload; // Destructure the product name and new quantity from the action payload
         // Find the item in the cart that matches the given name
         const itemToUpdate = state.items.find(item => item.name === name);
         if (itemToUpdate) {
-            itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
+            if (quantity < 1) {
+                itemToUpdate.quantity = 1;
+            } else {
+                itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
+            }
+            
         }
-    },
+    }
   },
 });
 

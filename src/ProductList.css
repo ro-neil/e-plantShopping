@@ -124,6 +124,9 @@ body {
     transition: background-color 0.3s ease-in-out;
     margin-top: 10px;
 }
+.product-button-disabled {
+    background-color: #a4a2a1 !important;
+}
 
 .product-button:hover {
     background-color: #c0392b;
@@ -177,6 +180,7 @@ body {
     justify-content: center;
     width: 650px;
     font-size: 19px;
+    gap: 0.5rem;
 }
 .cart{
     color: white;
