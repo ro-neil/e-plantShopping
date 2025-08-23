@@ -294,8 +294,8 @@ function ProductList({ onHomeClick }) {
                         <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
                         <a href="/" onClick={(e) => handleHomeClick(e)}>
                             <div>
-                                <h3 style={{ color: 'yellow' }}>Paradise Nursery</h3>
-                                <i style={{ color: 'white', fontSize: '14px' }}>Where Green Meets Serenity</i>
+                                <h3 style={{ color: 'yellow' }}>Green Haven Nursery</h3>
+                                <i style={{ color: 'white', fontSize: '14px' }}>Where every plant finds its perfect home</i>
                             </div>
                         </a>
                     </div>
